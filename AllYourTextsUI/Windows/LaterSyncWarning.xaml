@@ -1,0 +1,25 @@
+﻿<Window x:Class="AllYourTextsUi.Windows.LaterSyncWarning"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="More Recent Backup Found"
+        ShowInTaskbar="False"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner"
+        Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"
+        Icon="/AllYourTexts;component/Images/envelope_icon.ico"
+        SizeToContent="WidthAndHeight">
+    <StackPanel Margin="10,5,10,15" MaxWidth="425">
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+            <Image Source="pack://application:,,,/Images/warning_icon.png" Width="40" Height="40" Margin="5,5,15,5" />
+            <Label FontSize="18" Padding="0" FontWeight="SemiBold" VerticalAlignment="Center">More Recent Backup Found</Label>
+        </StackPanel>
+        <TextBlock Margin="5" TextWrapping="Wrap">An iPhone backup was found that is more recent than your default backup.</TextBlock>
+        <TextBlock Margin="5" TextWrapping="Wrap">Would you like to choose from a list of available iPhone devices?</TextBlock>
+        
+        <DockPanel Margin="0,20,0,0" LastChildFill="False">
+            <CheckBox DockPanel.Dock="Left" Name="dontShowAgainCheckbox" IsChecked="{Binding IgnoreMoreRecentSyncs}">Don't show this message again.</CheckBox>
+            <Button DockPanel.Dock="Right" Name="noButton" Width="70" Click="noButton_Click" IsCancel="True">_No</Button>
+            <Button DockPanel.Dock="Right" Name="okButton" Width="70" Click="yesButton_Click" Margin="0,0,10,0" IsDefault="True">_Yes</Button>
+        </DockPanel>
+    </StackPanel>
+</Window>

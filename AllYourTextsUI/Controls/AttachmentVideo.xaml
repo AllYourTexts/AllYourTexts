@@ -1,0 +1,29 @@
+﻿<local:AttachmentBase x:Class="AllYourTextsUi.Controls.AttachmentVideo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:local="clr-namespace:AllYourTextsUi.Controls"
+             xmlns:localCommands="clr-namespace:AllYourTextsUi.Commands"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             Margin="15,3"
+             BorderThickness="1"
+             BorderBrush="LightGray">
+    <local:AttachmentBase.CommandBindings>
+        <CommandBinding Command="{x:Static localCommands:OpenAttachmentVideoCommand.OpenAttachmentVideo}"
+                        Executed="OpenAttachment_Executed"
+                        CanExecute="OpenAttachment_CanExecute" />
+    </local:AttachmentBase.CommandBindings>
+    <local:AttachmentBase.InputBindings>
+        <MouseBinding Gesture="LeftClick" Command="{x:Static localCommands:OpenAttachmentVideoCommand.OpenAttachmentVideo}" />
+    </local:AttachmentBase.InputBindings>
+    <local:AttachmentBase.ContextMenu>
+        <ContextMenu>
+            <MenuItem Header="Save As..." Click="SaveAs_Click" />
+            <MenuItem Command="{x:Static localCommands:OpenAttachmentVideoCommand.OpenAttachmentVideo}" CommandTarget="{Binding Path=PlacementTarget, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}}" />
+        </ContextMenu>
+    </local:AttachmentBase.ContextMenu>
+    <StackPanel>
+        <Image Source="pack://application:,,,/Resources/video_icon.png" Height="80" Width="60" Margin="25,5" />
+        <Label HorizontalAlignment="Center">Video Attachment</Label>
+    </StackPanel>
+</local:AttachmentBase>

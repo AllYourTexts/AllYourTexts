@@ -1,0 +1,49 @@
+﻿<local:BugSendDialogViewBase x:Class="AllYourTextsUi.SendBugReportDialogView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:AllYourTextsUi"
+        Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"
+        Icon="/AllYourTexts;component/Images/envelope_icon.ico"
+        FocusManager.FocusedElement="{Binding ElementName=feedbackTextBox}"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner"
+        Title="Send Error Report"
+        SizeToContent="Height"
+        Width="500">
+    <DockPanel LastChildFill="False" Margin="10,5,10,15" >
+        <StackPanel DockPanel.Dock="Top">
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,5">
+                <Image Source="pack://application:,,,/Images/error_icon.png" Width="40" Height="40" Margin="10,0,15,0" />
+                <StackPanel Width="375">
+                    <Label FontSize="18" Padding="0" FontWeight="SemiBold">Send Error Report</Label>
+                    <TextBlock TextWrapping="Wrap" Margin="0,5,0,0">
+                        The application has encountered an unexpected error and must shut down.
+                    </TextBlock>
+                </StackPanel>
+            </StackPanel>
+            <TextBlock TextWrapping="Wrap" Margin="0,10,0,0" FontSize="15">
+                        Would you like to send us an error report to help us fix the issue?
+            </TextBlock>
+            <Expander Header="What information is included in the error report?" Margin="0,10,0,0">
+                <TextBox Name="errorReportPreviewTextBox" Height="90" Background="Transparent" IsReadOnly="True" TextWrapping="Wrap" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" />
+            </Expander>
+            <StackPanel Orientation="Horizontal" Margin="0,15,0,5">
+                <Label Target="{Binding ElementName=emailAddressTextBox}">_Email Address (optional):</Label>
+                <TextBox Name="emailAddressTextBox" Width="180" MaxLength="100"/>
+            </StackPanel>
+            <Label Target="{Binding ElementName=userCrashDescriptionTextBox}">_What were you doing when the application crashed? (optional)</Label>
+            <TextBox Name="userCrashDescriptionTextBox" Height="60" TextWrapping="Wrap" MaxLength="1000" AcceptsReturn="True"  ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" />
+            <TextBlock Name="errorTextBlock" Foreground="Red" MinHeight="50" Padding="4,2" TextWrapping="Wrap" Visibility="Hidden">Server response is yada yada.</TextBlock>
+        </StackPanel>
+        <DockPanel DockPanel.Dock="Bottom" Margin="0,15,0,0">
+            <StackPanel DockPanel.Dock="Left" Orientation="Horizontal">
+                <ProgressBar Name="sendProgressBar" IsIndeterminate="True" Width="160" Height="16" Visibility="Hidden" />
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Name="sendErrorReportButton" Content="_Send Error Report" Width="125" IsDefault="True" Click="sendErrorReportButton_Click" />
+                <Button Content="Cancel" IsCancel="True" Width="70" Margin="7,0,0,0" />
+            </StackPanel>
+        </DockPanel>
+    </DockPanel>
+</local:BugSendDialogViewBase>
+

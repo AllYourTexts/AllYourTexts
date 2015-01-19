@@ -1,0 +1,44 @@
+﻿<local:BugSendDialogViewBase x:Class="AllYourTextsUi.SendFeedbackDialogView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:AllYourTextsUi"
+        Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"
+        Icon="/AllYourTexts;component/Images/envelope_icon.ico"
+        FocusManager.FocusedElement="{Binding ElementName=feedbackTextBox}"
+        ShowInTaskbar="False"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner"
+        Title="Give Feedback"
+        SizeToContent="Height"
+        Width="425">
+    <DockPanel LastChildFill="False" Margin="10,5,10,15" >
+        <StackPanel DockPanel.Dock="Top">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="pack://application:,,,/Images/lightbulb_icon.png" Width="70" Margin="0,0,5,0" />
+                <StackPanel>
+                    <Label FontSize="18" Padding="0">Give Feedback</Label>
+                    <TextBlock TextWrapping="Wrap" Margin="0,5,0,0" Width="300">
+                        Is there something that doesn't work the way you expected?
+                        Is there a feature you'd like to see added? Let us know!
+                    </TextBlock>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,15,0,5">
+                <Label Target="{Binding ElementName=emailAddressTextBox}">_Email Address (optional):</Label>
+                <TextBox Name="emailAddressTextBox" Width="180" VerticalAlignment="Center" Padding="1,3" MaxLength="100"/>
+            </StackPanel>
+            <Label Target="{Binding ElementName=feedbackTextBox}">_Feedback (4000 characters maximum):</Label>
+            <TextBox Name="feedbackTextBox" Height="160" TextWrapping="Wrap" MaxLength="4000" AcceptsReturn="True" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto" />
+            <TextBlock Name="errorTextBlock" Foreground="Red" MinHeight="50" Padding="4,2" TextWrapping="Wrap" Visibility="Hidden">Server response is yada yada.</TextBlock>
+        </StackPanel>
+        <DockPanel DockPanel.Dock="Bottom" Margin="0,15,0,0">
+            <StackPanel DockPanel.Dock="Left" Orientation="Horizontal">
+                <ProgressBar Name="sendProgressBar" IsIndeterminate="True" Width="160" Height="16" Visibility="Hidden" />
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Name="sendFeedbackButton" Content="_Send Feedback" Width="115" IsDefault="True" Click="sendFeedbackButton_Click" />
+                <Button Content="Cancel" IsCancel="True" Width="70" Margin="7,0,0,0" />
+            </StackPanel>
+        </DockPanel>
+    </DockPanel>
+</local:BugSendDialogViewBase>

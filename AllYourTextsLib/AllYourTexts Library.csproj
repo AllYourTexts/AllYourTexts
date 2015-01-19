@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2B78A810-C52E-43A9-9E3E-804DB2F73964}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AllYourTextsLib</RootNamespace>
+    <AssemblyName>AllYourTextsLib</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BugzScoutDotNet, Version=1.0.4251.3050, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\BugzScoutDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clock.cs" />
+    <Compile Include="Conversation\AggregateConversation.cs" />
+    <Compile Include="CountryCallingCodeFinder.cs" />
+    <Compile Include="DataReader\BPListParser.cs" />
+    <Compile Include="DataReader\ByteConverter.cs" />
+    <Compile Include="Conversation\ChatConversation.cs" />
+    <Compile Include="ChatRoomInformation.cs" />
+    <Compile Include="DataReader\ChatRoomInformationReader.cs" />
+    <Compile Include="Contact.cs" />
+    <Compile Include="ContactBase.cs" />
+    <Compile Include="ContactComparer.cs" />
+    <Compile Include="Conversation\ContactList.cs" />
+    <Compile Include="DataReader\ContactReader.cs" />
+    <Compile Include="Conversation\ConversationBase.cs" />
+    <Compile Include="Conversation\ConversationComparer.cs" />
+    <Compile Include="Conversation\ConversationManagerBase.cs" />
+    <Compile Include="DataReader\ChatRoomInformationReaderiOS6.cs" />
+    <Compile Include="DataReader\IOsPathConverter.cs" />
+    <Compile Include="DataReader\MbdbPathConverter.cs" />
+    <Compile Include="DataReader\TextMessageReaderBase.cs" />
+    <Compile Include="DataReader\TextMessageReaderiOS6.cs" />
+    <Compile Include="DataReader\DatabaseParserBase.cs" />
+    <Compile Include="Diagnostics\BugReportCreator.cs" />
+    <Compile Include="Diagnostics\BugzScoutWrapper.cs" />
+    <Compile Include="Framework\Exceptions\BackupDatabaseReadException.cs" />
+    <Compile Include="Framework\Exceptions\DatabaseQueryException.cs" />
+    <Compile Include="Framework\Exceptions\MbdbDataInvalidException.cs" />
+    <Compile Include="Framework\Exceptions\MissingBackupFileException.cs" />
+    <Compile Include="Framework\Exceptions\MissingBackupPathException.cs" />
+    <Compile Include="Framework\Exceptions\NoBackupsFoundException.cs" />
+    <Compile Include="Framework\Exceptions\UnreadableDatabaseFileException.cs" />
+    <Compile Include="Framework\IBugReportCollector.cs" />
+    <Compile Include="Framework\IBugReportCreator.cs" />
+    <Compile Include="Framework\IClock.cs" />
+    <Compile Include="Framework\IContact.cs" />
+    <Compile Include="Framework\IContactList.cs" />
+    <Compile Include="Framework\IConversation.cs" />
+    <Compile Include="Framework\IConversationManager.cs" />
+    <Compile Include="Framework\IConversationMessage.cs" />
+    <Compile Include="Framework\IConversationStatistics.cs" />
+    <Compile Include="Framework\IDatabaseReader.cs" />
+    <Compile Include="Framework\IHttpFormUploader.cs" />
+    <Compile Include="Framework\ILoadingProgressCallback.cs" />
+    <Compile Include="Framework\IMessageAttachment.cs" />
+    <Compile Include="Framework\IOsVersion.cs" />
+    <Compile Include="Framework\IPhoneDeviceInfo.cs" />
+    <Compile Include="Framework\IPhoneNumber.cs" />
+    <Compile Include="Framework\IProgressCallback.cs" />
+    <Compile Include="DataReader\MbdbParser.cs" />
+    <Compile Include="Http\HttpFormUploader.cs" />
+    <Compile Include="MbdbRecord.cs" />
+    <Compile Include="DataReader\MbdbRecordReader.cs" />
+    <Compile Include="MergedContact.cs" />
+    <Compile Include="Conversation\MergingConversationManager.cs" />
+    <Compile Include="DataReader\ContactPhotoReader.cs" />
+    <Compile Include="ContactPhoto.cs" />
+    <Compile Include="MessageAttachment.cs" />
+    <Compile Include="MmsDataItem.cs" />
+    <Compile Include="MmsMessageData.cs" />
+    <Compile Include="MmsMetadata.cs" />
+    <Compile Include="OsVersion.cs" />
+    <Compile Include="PhoneDeviceInfo.cs" />
+    <Compile Include="DataReader\PhoneDeviceInfoReader.cs" />
+    <Compile Include="Conversation\SingleNumberConversation.cs" />
+    <Compile Include="Conversation\ConversationManager.cs" />
+    <Compile Include="Conversation\ConversationStatisticsGenerator.cs" />
+    <Compile Include="DataReader\DatabaseFinder.cs" />
+    <Compile Include="DataReader\DatabaseReader.cs" />
+    <Compile Include="Conversation\MergedConversation.cs" />
+    <Compile Include="PhoneNumber.cs" />
+    <Compile Include="ProductInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Conversation\ConversationStatistics.cs" />
+    <Compile Include="TextMessage.cs" />
+    <Compile Include="DataReader\TextMessageReader.cs" />
+    <Compile Include="DataReader\TextMessageReader2.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

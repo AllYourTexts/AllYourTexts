@@ -1,0 +1,33 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AllYourTextsUi" GeneratedClassName="DisplayOptions">
+  <Profiles />
+  <Settings>
+    <Setting Name="HideEmptyConversations" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="MergeContacts" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="TimeDisplayFormat" Type="AllYourTextsUi.Framework.TimeDisplayFormat" Scope="User">
+      <Value Profile="(Default)">HourMinSecAmPm</Value>
+    </Setting>
+    <Setting Name="ConversationSorting" Type="AllYourTextsUi.Framework.ConversationSorting" Scope="User">
+      <Value Profile="(Default)">AlphabeticalByContact</Value>
+    </Setting>
+    <Setting Name="PromptForPhoneChoice" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="PhoneDataPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PromptForSyncTroubleshooting" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="LoadMmsAttachments" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="WarnAboutMoreRecentSync" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

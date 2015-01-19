@@ -1,0 +1,24 @@
+﻿<Window x:Class="AllYourTextsUi.PhoneSelectionView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:AllYourTextsUi.Controls"
+        Title="Select Phone"
+        ShowInTaskbar="False"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner"
+        Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"
+        Icon="/AllYourTexts;component/Images/envelope_icon.ico"
+        SizeToContent="WidthAndHeight">
+    <StackPanel Margin="10,5,10,15">
+        <TextBlock Margin="0,5" TextWrapping="Wrap">Select which phone you would like to view:</TextBlock>
+        <local:PhoneDeviceList
+            x:Name="phoneListBox"
+            Height="130"
+            SelectedValuePath="DeviceInfo"
+            ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+            ScrollViewer.VerticalScrollBarVisibility="Visible"
+            SelectionChanged="phoneListBox_SelectionChanged" />
+        <CheckBox Name="promptForPhoneCheckBox" Margin="0,10,0,0" Content="_Always ask me to choose when program starts." />
+        <Button Name="okButton" Width="70" HorizontalAlignment="Right" Margin="0,20,0,0" Click="okButton_Click" IsEnabled="False">OK</Button>
+    </StackPanel>
+</Window>

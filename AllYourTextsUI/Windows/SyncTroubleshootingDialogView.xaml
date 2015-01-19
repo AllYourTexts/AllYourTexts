@@ -1,0 +1,26 @@
+﻿<Window x:Class="AllYourTextsUi.SyncTroubleshootingDialogView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:AllYourTextsUi"
+        Title="Warning"
+        SizeToContent="Height"
+        Width="450"
+        ShowInTaskbar="False"
+        ResizeMode="NoResize"
+        Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"
+        Icon="/AllYourTexts;component/Images/envelope_icon.ico">
+    <DockPanel LastChildFill="False" Margin="10,5,10,10" >
+        <StackPanel DockPanel.Dock="Top">
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                <Image Source="pack://application:,,,/Images/warning_icon.png" Width="40" Height="40" Margin="5,5,15,5" />
+                <Label FontSize="18" Padding="0" FontWeight="SemiBold" VerticalAlignment="Center">Text Messages Out Of Date</Label>
+            </StackPanel>
+            <TextBlock TextWrapping="Wrap" Margin="10,10,10,10">The text messages found on this computer have not been synced with your iPhone in a while. The conversations shown may be out of date.</TextBlock>
+            <TextBlock Padding="5"><local:LaunchingHyperlink NavigateUri="{x:Static local:ProductWebSiteInfo.SyncTroubleshootingUrl}" Text="Click here to ensure newest text messages are being shown" /></TextBlock>
+            <DockPanel Margin="0,20,0,0" LastChildFill="False">
+                <CheckBox DockPanel.Dock="Left" Name="dontShowAgainCheckbox" IsChecked="{Binding SuppressOutOfDateWarnings}">Don't show this message again.</CheckBox>
+                <Button DockPanel.Dock="Right" Content="OK" IsDefault="True" IsCancel="True" Width="60" />
+            </DockPanel>
+        </StackPanel>
+    </DockPanel>
+</Window>

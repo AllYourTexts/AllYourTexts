@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{99259442-4143-48F9-8715-D372E5EE0A1F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AllYourTextsTest</RootNamespace>
+    <AssemblyName>AllYourTexts Test</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BugzScoutDotNet, Version=1.0.4251.3050, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.2.1409.1722\lib\net40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Controls.DataVisualization.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\System.Windows.Controls.DataVisualization.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\WPFToolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AttachmentExportLocatorTest.cs" />
+    <Compile Include="AttachmentModelTest.cs" />
+    <Compile Include="BPListParserTest.cs" />
+    <Compile Include="BugReportCreatorTest.cs" />
+    <Compile Include="ByteConverterTest.cs" />
+    <Compile Include="ChatRoomInformationReaderiOS6Test.cs" />
+    <Compile Include="ChatRoomInformationReaderTest.cs" />
+    <Compile Include="ContactComparerTest.cs" />
+    <Compile Include="Exporting\ExportedFilenameGeneratorTests.cs" />
+    <Compile Include="Library Tests\IOsPathConverterTest.cs" />
+    <Compile Include="Mock Objects\MockFormUploader.cs" />
+    <Compile Include="Mock Objects\MockPhoneSelectOptions.cs" />
+    <Compile Include="Mock Objects\MockThrowingFormUploader.cs" />
+    <Compile Include="UI Tests\Facebook Tests\AccessTokenSerializerTest.cs" />
+    <Compile Include="UI Tests\Facebook Tests\PhotoPosterTest.cs" />
+    <Compile Include="UI Tests\FileCreatorTest.cs" />
+    <Compile Include="UI Tests\PhoneSelectorTest.cs" />
+    <Compile Include="UI Tests\ExportMultipleDialogViewTest.cs" />
+    <Compile Include="UI Tests\ConversationDescriptionHelperTest.cs" />
+    <Compile Include="ConversationListItemTest.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Library Tests\MessageAttachmentTest.cs" />
+    <Compile Include="Library Tests\ExceptionSerializationTest.cs" />
+    <Compile Include="MergedContactTest.cs" />
+    <Compile Include="Mock Objects\MockBugReportCollector.cs" />
+    <Compile Include="Mock Objects\MockTextDatabaseReaderiOS6.cs" />
+    <Compile Include="Mock Objects\MockContact.cs" />
+    <Compile Include="Library Tests\TextMessageReaderiOS6Test.cs" />
+    <Compile Include="UI Tests\ConversationExporterBaseTest.cs" />
+    <Compile Include="UI Tests\ConversationRendererBaseTest.cs" />
+    <Compile Include="Mock Objects\MockChatRoomDatabaseReader.cs" />
+    <Compile Include="Mock Objects\MockExceptionThrowingContactDatabaseReader.cs" />
+    <Compile Include="Mock Objects\MockTextDatabaseReader2.cs" />
+    <Compile Include="OsVersionTest.cs" />
+    <Compile Include="Library Tests\TextMessageReader2Test.cs" />
+    <Compile Include="UI Tests\ConversationExporterHtmlTest.cs" />
+    <Compile Include="UI Tests\ConversationRendererPlaintextTest.cs" />
+    <Compile Include="UI Tests\ConversationRendererHtmlTest.cs" />
+    <Compile Include="Mock Objects\MockFileSystem.cs" />
+    <Compile Include="UI Tests\ConversationExporterPlaintextTest.cs" />
+    <Compile Include="Library Tests\BugReporterTest.cs" />
+    <Compile Include="Library Tests\AggregateConversationTest.cs" />
+    <Compile Include="Library Tests\ConversationComparerTest.cs" />
+    <Compile Include="Mock Objects\MockConversation.cs" />
+    <Compile Include="Library Tests\PhoneDeviceInfoReaderTest.cs" />
+    <Compile Include="UI Tests\FindDialogModelTest.cs" />
+    <Compile Include="Library Tests\ContactReaderTest.cs" />
+    <Compile Include="Library Tests\ContactTest.cs" />
+    <Compile Include="Library Tests\ConversationManagerTest.cs" />
+    <Compile Include="Mock Objects\MockConversationSearchTarget.cs" />
+    <Compile Include="Mock Objects\MockCountedConversation.cs" />
+    <Compile Include="Mock Objects\MockEmptyConversation.cs" />
+    <Compile Include="UI Tests\ConversationRendererRichTextTest.cs" />
+    <Compile Include="Library Tests\ConversationStatisticsGeneratorTest.cs" />
+    <Compile Include="Library Tests\SingleNumberConversationTest.cs" />
+    <Compile Include="UI Tests\ConversationWindowTest.cs" />
+    <Compile Include="UI Tests\GraphDataGeneratorTest.cs" />
+    <Compile Include="UI Tests\GraphWindowModelTest.cs" />
+    <Compile Include="UI Tests\MainWindowModelBaseTest.cs" />
+    <Compile Include="Library Tests\MergingConversationManagerTest.cs" />
+    <Compile Include="Mock Objects\MockContactDatabaseReader.cs" />
+    <Compile Include="Mock Objects\MockDatabase.cs" />
+    <Compile Include="Mock Objects\MockDisplayOptions.cs" />
+    <Compile Include="Mock Objects\MockLoadingProgressCallback.cs" />
+    <Compile Include="Mock Objects\MockTextDatabaseReader.cs" />
+    <Compile Include="Library Tests\PhoneNumberFormatterTest.cs" />
+    <Compile Include="Library Tests\PhoneNumberTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Library Tests\ConversationStatisticsTest.cs" />
+    <Compile Include="Library Tests\TextMessageReaderTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DummyData\DummyData.csproj">
+      <Project>{CFB223DA-6ACE-4F5C-B7AD-6529BC5FBFD5}</Project>
+      <Name>DummyData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AllYourTextsLib\AllYourTexts Library.csproj">
+      <Project>{2B78A810-C52E-43A9-9E3E-804DB2F73964}</Project>
+      <Name>AllYourTexts Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AllYourTextsUi\AllYourTexts UI.csproj">
+      <Project>{925A69BD-3D20-41EE-95BC-F52A10146759}</Project>
+      <Name>AllYourTexts UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Shadow Include="Test References\AllYourTextsUi.accessor" />
+  </ItemGroup>
+  <ItemGroup>
+    <Shadow Include="Test References\AllYourTextsLib.accessor" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

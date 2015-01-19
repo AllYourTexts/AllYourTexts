@@ -1,0 +1,520 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{925A69BD-3D20-41EE-95BC-F52A10146759}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AllYourTextsUi</RootNamespace>
+    <AssemblyName>AllYourTexts</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>ftps://mikedownsouth.com/ayt/download/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Background</UpdateMode>
+    <UpdateInterval>1</UpdateInterval>
+    <UpdateIntervalUnits>Weeks</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://www.allyourtexts.com/download/</InstallUrl>
+    <ProductName>AllYourTexts</ProductName>
+    <PublisherName>AllYourTexts Software</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>18</ApplicationRevision>
+    <ApplicationVersion>1.3.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2D513475EE8E98412B1596C5F2EE790D34D788BD</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ayt.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestTimestampUrl>http://timestamp.verisign.com/scripts/timstamp.dll</ManifestTimestampUrl>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>envelope_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.5\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Controls.DataVisualization.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\System.Windows.Controls.DataVisualization.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\WPFToolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AsyncLoadingProgressParams.cs" />
+    <Compile Include="Commands\OpenAttachmentVideoCommand.cs" />
+    <Compile Include="Commands\CopyConversationTextFormattedCommand.cs" />
+    <Compile Include="Commands\CopyConversationTextCommand.cs" />
+    <Compile Include="Commands\CopyGraphCommand.cs" />
+    <Compile Include="Commands\ExportAllConversationsCommand.cs" />
+    <Compile Include="Commands\ExportSingleConversationCommand.cs" />
+    <Compile Include="Commands\OpenAttachmentImageCommand.cs" />
+    <Compile Include="Commands\ShareOnFacebookCommand.cs" />
+    <Compile Include="Commands\ShowSettingsDialogCommand.cs" />
+    <Compile Include="Commands\SwitchToConversationViewCommand.cs" />
+    <Compile Include="Commands\SwitchToGraphViewCommand.cs" />
+    <Compile Include="Controls\AttachmentBase.cs" />
+    <Compile Include="Controls\AttachmentImage.xaml.cs">
+      <DependentUpon>AttachmentImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AttachmentAudio.xaml.cs">
+      <DependentUpon>AttachmentAudio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AttachmentVideo.xaml.cs">
+      <DependentUpon>AttachmentVideo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ConvesationTextBox.xaml.cs">
+      <DependentUpon>ConvesationTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FindBarView.xaml.cs">
+      <DependentUpon>FindBarView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PhoneDeviceList.xaml.cs">
+      <DependentUpon>PhoneDeviceList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PhoneDeviceListItem.xaml.cs">
+      <DependentUpon>PhoneDeviceListItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConversationDescriptionHelper.cs" />
+    <Compile Include="ConversationRendering\ConversationContentRun.cs" />
+    <Compile Include="ConversationRendering\ConversationRendererBase.cs" />
+    <Compile Include="ConversationRendering\ConversationRendererHtml.cs" />
+    <Compile Include="ConversationRendering\ConversationRendererPlaintext.cs" />
+    <Compile Include="Exporting\AsyncExportingProgressParams.cs" />
+    <Compile Include="Exporting\AttachmentExportLocator.cs" />
+    <Compile Include="Exporting\ConversationExporterPlaintext.cs" />
+    <Compile Include="Exporting\ConversationExporterBase.cs" />
+    <Compile Include="Exporting\ConversationExporterHtml.cs" />
+    <Compile Include="Exporting\ExportedFilenameGenerator.cs" />
+    <Compile Include="Exporting\ExportError.cs" />
+    <Compile Include="Exporting\ExportErrorFormatter.cs" />
+    <Compile Include="Exporting\FileCreator.cs" />
+    <Compile Include="Exporting\FileSystemBase.cs" />
+    <Compile Include="Exporting\OsFileSystem.cs" />
+    <Compile Include="Facebook\AccessToken.cs" />
+    <Compile Include="Facebook\AccessTokenSerializer.cs" />
+    <Compile Include="Facebook\BadAccessTokenException.cs" />
+    <Compile Include="Facebook\GotPhotoUrlEventArgs.cs" />
+    <Compile Include="Facebook\GraphFacebookUploader.cs" />
+    <Compile Include="Facebook\HttpUtility.cs" />
+    <Compile Include="Facebook\IAccessTokenSerializer.cs" />
+    <Compile Include="Facebook\IPhotoLinkGrabber.cs" />
+    <Compile Include="Facebook\IPhotoPoster.cs" />
+    <Compile Include="Facebook\OAuthCompleteEventArgs.cs" />
+    <Compile Include="Facebook\OAuthConsentView.xaml.cs">
+      <DependentUpon>OAuthConsentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Facebook\OAuthData.cs" />
+    <Compile Include="Facebook\OAuthFrame.xaml.cs" />
+    <Compile Include="Facebook\OAuthGrabber.cs" />
+    <Compile Include="Facebook\PhotoLinkGrabber.cs" />
+    <Compile Include="Facebook\PhotoPoster.cs" />
+    <Compile Include="Facebook\PhotoUploadCompleteEventArgs.cs" />
+    <Compile Include="Facebook\PhotoUploadModel.cs" />
+    <Compile Include="Facebook\PhotoUploadView.xaml.cs" />
+    <Compile Include="Facebook\PhotoUploadViewFactory.cs" />
+    <Compile Include="Facebook\UploadFailedException.cs" />
+    <Compile Include="Framework\Exceptions\AttachmentOpenException.cs" />
+    <Compile Include="Framework\IAttachmentExportLocator.cs" />
+    <Compile Include="FailHandler.cs" />
+    <Compile Include="Framework\IAboutBoxModel.cs" />
+    <Compile Include="Framework\IBugSendDialogModel.cs" />
+    <Compile Include="Framework\IConversationExporter.cs" />
+    <Compile Include="Framework\IConversationListItem.cs" />
+    <Compile Include="Framework\IConversationRenderer.cs" />
+    <Compile Include="Framework\IConversationSearchTarget.cs" />
+    <Compile Include="Framework\IConversationWindowModel.cs" />
+    <Compile Include="Framework\IDisplayOptions.cs" />
+    <Compile Include="Framework\IFindDialogModel.cs" />
+    <Compile Include="Framework\IGraphDataGenerator.cs" />
+    <Compile Include="Framework\IGraphWindowModel.cs" />
+    <Compile Include="Framework\IMainWindowModel.cs" />
+    <Compile Include="Framework\IOptionsDialogModel.cs" />
+    <Compile Include="Framework\IFileSystem.cs" />
+    <Compile Include="Framework\IPhoneSelectOptions.cs" />
+    <Compile Include="GraphExporter.cs" />
+    <Compile Include="GraphTypeListItem.cs" />
+    <Compile Include="Framework\IConversationDescriptionHelper.cs" />
+    <Compile Include="Models\AttachmentModel.cs" />
+    <Compile Include="Models\BugSendDialogModelBase.cs" />
+    <Compile Include="Models\ExportMultipleDialogModel.cs" />
+    <Compile Include="Models\SendBugReportDialogModel.cs" />
+    <Compile Include="Models\SendFeedbackDialogModel.cs" />
+    <Compile Include="NullToVisibilityConverter.cs" />
+    <Compile Include="PhoneSelector.cs" />
+    <Compile Include="ProgressCallback.cs" />
+    <Compile Include="Windows\AboutBoxView.xaml.cs">
+      <DependentUpon>AboutBoxView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ConversationRenderControl.xaml.cs">
+      <DependentUpon>ConversationRenderControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LaunchingHyperlink.xaml.cs">
+      <DependentUpon>LaunchingHyperlink.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\BugSendDialogViewBase.cs" />
+    <Compile Include="Windows\LaterSyncWarning.xaml.cs">
+      <DependentUpon>LaterSyncWarning.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SyncTroubleshootingDialogView.xaml.cs">
+      <DependentUpon>SyncTroubleshootingDialogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\DatabaseErrorDialog.xaml.cs">
+      <DependentUpon>DatabaseErrorDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ExportMultipleDialogView.xaml.cs">
+      <DependentUpon>ExportMultipleDialogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\PhoneSelectionView.xaml.cs">
+      <DependentUpon>PhoneSelectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SendBugReportDialogView.xaml.cs">
+      <DependentUpon>SendBugReportDialogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SendFeedbackDialogView.xaml.cs">
+      <DependentUpon>SendFeedbackDialogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\LoadingProgressDialogView.xaml.cs">
+      <DependentUpon>LoadingProgressDialogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConversationRendering\ConversationRendererRichText.cs" />
+    <Compile Include="Controls\GraphControl.xaml.cs">
+      <DependentUpon>GraphControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GraphDataGenerator.cs" />
+    <Compile Include="Models\AboutBoxModel.cs" />
+    <Compile Include="Models\FindDialogModel.cs" />
+    <Compile Include="Models\GraphWindowModel.cs" />
+    <Compile Include="Models\MainWindowModelBase.cs" />
+    <Compile Include="ProductWebSiteInfo.cs" />
+    <Compile Include="ProductInfoIndirect.cs" />
+    <Compile Include="TextGraphDataCollection.cs" />
+    <Compile Include="WpfFolderDialogExtension.cs" />
+    <Page Include="Controls\AttachmentImage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\AttachmentAudio.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\AttachmentVideo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ConvesationTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\FindBarView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PhoneDeviceList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PhoneDeviceListItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Facebook\OAuthConsentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Facebook\OAuthFrame.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Facebook\PhotoUploadView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\AboutBoxView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ConversationRenderControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\GraphControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\LaunchingHyperlink.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\LaterSyncWarning.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\SyncTroubleshootingDialogView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\DatabaseErrorDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ExportMultipleDialogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\PhoneSelectionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\SendBugReportDialogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\SendFeedbackDialogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\LoadingProgressDialogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConversationListItem.cs" />
+    <Compile Include="Models\ConversationWindowModel.cs" />
+    <Compile Include="DisplayOptions.cs" />
+    <Compile Include="DisplayOptions.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>DisplayOptions.settings</DependentUpon>
+    </Compile>
+    <Compile Include="LoadingProgressCallback.cs" />
+    <Compile Include="Windows\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Windows\OptionsDialogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Windows\OptionsDialogView.xaml.cs">
+      <DependentUpon>OptionsDialogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneNumberFormatter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ayt.pfx" />
+    <None Include="DisplayOptions.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>DisplayOptions.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AllYourTextsLib\AllYourTexts Library.csproj">
+      <Project>{2B78A810-C52E-43A9-9E3E-804DB2F73964}</Project>
+      <Name>AllYourTexts Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\key_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cancel_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\close_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\arrow_down_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\arrow_up_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\lightbulb_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\error_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="AllYourTexts.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="AllYourTextsLib.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\envelope_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="envelope_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\warning_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\video_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\facebookicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\conversation_icon.png" />
+    <Resource Include="Resources\graph_icon.png" />
+    <Resource Include="Resources\graph_icon_lg.png" />
+    <Resource Include="Resources\settings_icon.png" />
+    <Resource Include="Resources\settings_icon_lg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\audio_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\audio_icon.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

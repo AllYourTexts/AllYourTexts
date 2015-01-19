@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="AllYourTextsUi.ConversationRenderControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:AllYourTextsUi"
+             xmlns:localCommands="clr-namespace:AllYourTextsUi.Commands">
+    <UserControl.CommandBindings>
+        <CommandBinding Command="{x:Static localCommands:CopyConversationTextCommand.CopyConversationText}"
+                        Executed="DoCopyConversationText_Executed"
+                        CanExecute="DoCopyConversationText_CanExecute" />
+        <CommandBinding Command="{x:Static localCommands:CopyConversationTextFormattedCommand.CopyConversationTextFormatted}"
+                        Executed="DoCopyConversationTextFormatted_Executed"
+                        CanExecute="DoCopyConversationTextFormatted_CanExecute" />
+    </UserControl.CommandBindings>
+    <DockPanel>
+        <local:FindBarView x:Name="findBar" DockPanel.Dock="Top" Visibility="Collapsed" />
+        <DockPanel Name="conversationPanel">
+            <local:ConvesationTextBox x:Name="emptyRichTextBox">
+                <!-- reminder: this text box is immediately replaced on load. just placeholder. -->
+            </local:ConvesationTextBox>
+        </DockPanel>
+    </DockPanel>
+</UserControl>
