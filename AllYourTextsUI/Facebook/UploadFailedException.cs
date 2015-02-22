@@ -6,6 +6,7 @@ using System.Text;
 
 namespace AllYourTextsUi.Facebook
 {
+    [Serializable]
     public class UploadFailedException : Exception
     {
         public UploadFailedException(Exception inner)

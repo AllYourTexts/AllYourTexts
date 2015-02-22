@@ -6,6 +6,7 @@ using System.Text;
 
 namespace AllYourTextsUi.Facebook
 {
+    [Serializable]
     public class BadAccessTokenException : Exception
     {
         public BadAccessTokenException()
