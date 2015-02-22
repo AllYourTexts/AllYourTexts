@@ -19,9 +19,9 @@ namespace AllYourTextsUi.Facebook
 
         private IPhotoLinkGrabber _photoLinkGrabber;
 
-        public delegate void FacebookPhotoUploadCompleteEventHandler(PhotoUploadCompleteEventArgs args);
+        public delegate void FacebookPhotoUploadCompleteEventHandler(PhotoUploadCompleteEventArgs e);
 
-        public delegate void GotPhotoUrlEventHandler(GotPhotoUrlEventArgs args);
+        public delegate void GotPhotoUrlEventHandler(GotPhotoUrlEventArgs e);
 
         public event FacebookPhotoUploadCompleteEventHandler PhotoUploadCompleteEvent;
 

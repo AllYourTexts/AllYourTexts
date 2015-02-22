@@ -13,7 +13,7 @@ namespace AllYourTextsUi.Facebook
     /// </summary>
     public partial class OAuthFrame : UserControl
     {
-        public delegate void OAuthCompleteEventHandler(OAuthCompleteEventArgs args);
+        public delegate void OAuthCompleteEventHandler(OAuthCompleteEventArgs e);
 
         public event OAuthCompleteEventHandler OAuthComplete;
 
