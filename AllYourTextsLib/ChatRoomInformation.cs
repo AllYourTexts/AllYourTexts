@@ -8,7 +8,6 @@ namespace AllYourTextsLib
     public class ChatRoomInformation
     {
         public string ChatId { get; private set; }
-
         public List<string> Participants { get; private set; }
 
         public ChatRoomInformation(string chatId, IEnumerable<string> participants)

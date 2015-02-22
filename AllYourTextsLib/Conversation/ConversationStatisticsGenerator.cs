@@ -8,7 +8,6 @@ namespace AllYourTextsLib.Conversation
 {
     public class ConversationStatisticsGenerator
     {
-
         private ConversationStatisticsGenerator()
         {
             ;

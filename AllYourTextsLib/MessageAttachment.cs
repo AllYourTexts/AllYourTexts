@@ -9,11 +9,8 @@ namespace AllYourTextsLib
     public class MessageAttachment : IMessageAttachment
     {
         public long MessageId { get; private set; }
-
         public AttachmentType Type { get; private set; }
-
         public string Path { get; private set; }
-
         public string OriginalFilename { get; private set; }
 
         public MessageAttachment(long messageId, AttachmentType type, string path, string originalFilename)

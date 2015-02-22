@@ -9,7 +9,6 @@ namespace AllYourTextsLib
     public class Contact : ContactBase, IContact
     {
         public override long ContactId { get; protected set; }
-
         public override List<IPhoneNumber> PhoneNumbers { get; protected set; }
 
         private string _firstName;

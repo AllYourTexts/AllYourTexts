@@ -8,7 +8,6 @@ namespace AllYourTextsLib
     public class MbdbRecordProperty
     {
         public string PropertyName { get; private set; }
-
         public string Value { get; private set; }
 
         public MbdbRecordProperty(string propertyName, string value)
@@ -38,35 +37,20 @@ namespace AllYourTextsLib
     public class MbdbRecord
     {
         public string Domain { get; set; }
-
         public string Path { get; set; }
-
         public string LinkTarget { get; set; }
-
         public string DataHash { get; set; }
-
         public string UnknownField1 { get; set; }
-
         public UInt16 Mode { get; set; }
-
         public UInt32 UnknownField2 { get; set; }
-
         public UInt32 UnknownField3 { get; set; }
-
         public UInt32 UserId { get; set; }
-
         public UInt32 GroupId { get; set; }
-
         public UInt32 LastModificationTime { get; set; }
-
         public UInt32 LastAccessedTime { get; set; }
-
         public UInt32 CreationTime { get; set; }
-
         public UInt64 FileLength { get; set; }
-
         public byte Flag { get; set; }
-
         public byte PropertyCount { get; set; }
 
         public List<MbdbRecordProperty> Properties { get; set; }

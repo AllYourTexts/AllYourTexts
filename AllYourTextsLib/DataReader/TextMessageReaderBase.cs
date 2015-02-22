@@ -130,11 +130,8 @@ FROM
         }
 
         protected const string iMessageServiceIdentifier = "iMessage";
-
         private static readonly DateTime _Epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
-
         private IOsPathConverter _iOsPathConverter;
-
         private string _backupDataPath;
     }
 }

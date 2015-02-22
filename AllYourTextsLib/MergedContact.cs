@@ -9,13 +9,9 @@ namespace AllYourTextsLib
     public class MergedContact : ContactBase, IContact
     {
         public override long ContactId { get; protected set; }
-
         public override List<IPhoneNumber> PhoneNumbers { get; protected set; }
-
         public override string FirstName { get; protected set; }
-
         public override string MiddleName { get; protected set; }
-
         public override string LastName { get; protected set; }
 
         public override string DisplayName

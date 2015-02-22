@@ -9,15 +9,10 @@ namespace AllYourTextsLib
     public abstract class ContactBase : IContact
     {
         public abstract long ContactId { get; protected set; }
-
         public abstract List<IPhoneNumber> PhoneNumbers { get; protected set; }
-
         public abstract string FirstName { get; protected set; }
-
         public abstract string MiddleName { get; protected set; }
-
         public abstract string LastName { get; protected set; }
-
         public abstract string DisplayName { get; }
 
         protected void AddPhoneNumber(IPhoneNumber phoneNumberToAdd)

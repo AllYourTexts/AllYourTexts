@@ -28,19 +28,12 @@ namespace AllYourTextsLib.DataReader
         private class BPListTrailer
         {
             public byte[] UnusedFields { get; set; }
-
             public byte SortVersion { get; set; }
-
             public byte OffsetIntSize { get; set; }
-
             public byte ObjectsRefSize { get; set; }
-
             public ulong NumObjects { get; set; }
-
             public ulong TopObject { get; set; }
-
             public ulong OffsetTableOffset { get; set; }
-
             public BPListTrailer()
             {
                 this.UnusedFields = new byte[5];

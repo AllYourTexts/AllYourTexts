@@ -24,17 +24,11 @@ namespace AllYourTextsLib.Conversation
             Dictionary<string, IConversation> conversationHashTable = new Dictionary<string, IConversation>();
 
             CheckForCancel(progressCallback);
-
             LoadContacts(conversationHashTable, contacts, progressCallback);
-
             LoadChatRoomInformation(conversationHashTable, chatInfoItems, progressCallback);
-
             LoadMessages(conversationHashTable, messages, progressCallback);
-
             LoadAttachments(attachments, progressCallback);
-
             CheckForCancel(progressCallback);
-
             List<IConversation> finalConversations = new List<IConversation>(conversationHashTable.Values);
 
             return finalConversations;
@@ -43,7 +37,6 @@ namespace AllYourTextsLib.Conversation
         private void LoadContacts(Dictionary<string, IConversation> conversationHashTable, IEnumerable<IContact> contacts, ILoadingProgressCallback progressCallback)
         {
             SetProgressPhase(progressCallback, LoadingPhase.ReadingContacts);
-
             foreach (IContact contact in contacts)
             {
                 LoadContact(conversationHashTable, contact, progressCallback);
@@ -232,11 +225,8 @@ namespace AllYourTextsLib.Conversation
             int workAmount = 0;
 
             workAmount += contactCountEstimate;
-
             workAmount += messageCountEstimate;
-
             workAmount += chatInfoCountEstimate;
-
             workAmount += attachmentCountEstimate;
             
             return workAmount;

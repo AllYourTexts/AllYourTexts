@@ -7,11 +7,9 @@ using AllYourTextsLib.Framework;
 
 namespace AllYourTextsLib
 {
-
     public class PhoneNumber : IPhoneNumber
     {
         public string Number { get; private set; }
-
         private string _country;
 
         public string Country

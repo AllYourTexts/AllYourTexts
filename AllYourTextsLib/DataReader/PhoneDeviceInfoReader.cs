@@ -89,7 +89,6 @@ namespace AllYourTextsLib.DataReader
         private static IPhoneDeviceInfo PhoneDeviceInfoFromFileContents(string filePath, string infoFileContents)
         {
             string backupPath = Path.GetDirectoryName(filePath);
-
             IOsVersion DefaultOsVersion = new OsVersion("4.0.0");
 
             try

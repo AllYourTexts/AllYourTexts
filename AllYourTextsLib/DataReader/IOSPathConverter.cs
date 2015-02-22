@@ -11,7 +11,6 @@ namespace AllYourTextsLib.DataReader
         public string TranslateiPhoneAttachmentPathToComputerPath(string iPhonePath, string computerBackupPath)
         {
             int pathStart;
-
             const string iOs6Prefix = "~/";
             const string iOs5Prefix = "/var/mobile/";
 

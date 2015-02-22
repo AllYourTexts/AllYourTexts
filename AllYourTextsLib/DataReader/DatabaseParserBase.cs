@@ -9,11 +9,8 @@ namespace AllYourTextsLib.DataReader
     public abstract class DatabaseParserBase<T> : IEnumerable<T>
     {
         public int ItemCountEstimate { get; private set; }
-
         protected abstract string DataQuery { get; }
-
         protected abstract string DataCountQuery { get; }
-
         private List<T> _ParsedContents;
 
         public DatabaseParserBase()

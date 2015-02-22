@@ -9,9 +9,7 @@ namespace AllYourTextsLib
     public class OsVersion : IOsVersion
     {
         public int MajorVersion { get; private set; }
-
         public int MinorVersion { get; private set; }
-
         public int RevisionNumber { get; private set; }
 
         public OsVersion(string versionString)

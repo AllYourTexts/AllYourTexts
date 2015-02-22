@@ -8,9 +8,7 @@ namespace AllYourTextsLib
     public class MmsDataItem
     {
         public long MessageId { get; private set; }
-
         public string PreviewFilename { get; private set; }
-
         public string FullSizeFilename { get; private set; }
 
         public MmsDataItem(long messageId, string previewFilename, string fullSizeFilename)

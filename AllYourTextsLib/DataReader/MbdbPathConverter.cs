@@ -18,7 +18,6 @@ namespace AllYourTextsLib.DataReader
             }
 
             string hashedPath = CalculateSHA1(mbdbPath);
-
             string filename = hashedPath.ToLower();
 
             return filename;

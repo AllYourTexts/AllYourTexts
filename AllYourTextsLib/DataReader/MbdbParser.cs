@@ -51,33 +51,19 @@ namespace AllYourTextsLib.DataReader
             MbdbRecord record = new MbdbRecord();
 
             record.Domain = ParseString(mbdbData, ref dataPosition);
-
             record.Path = ParseString(mbdbData, ref dataPosition);
-
             record.LinkTarget = ParseString(mbdbData, ref dataPosition);
-
             record.DataHash = ParseString(mbdbData, ref dataPosition);
-
             record.UnknownField1 = ParseString(mbdbData, ref dataPosition);
-
             record.Mode = ByteConverter.ParseUInt16(mbdbData, ref dataPosition);
-
             record.UnknownField2 = ByteConverter.ParseUInt32(mbdbData, ref dataPosition);
-
             record.UnknownField3 = ByteConverter.ParseUInt32(mbdbData, ref dataPosition);
-
             record.UserId = ByteConverter.ParseUInt32(mbdbData, ref dataPosition);
-
             record.GroupId = ByteConverter.ParseUInt32(mbdbData, ref dataPosition);
-
             record.LastModificationTime = ByteConverter.ParseUInt32(mbdbData, ref dataPosition);
-
             record.LastAccessedTime = ByteConverter.ParseUInt32(mbdbData, ref dataPosition);
-
             record.CreationTime = ByteConverter.ParseUInt32(mbdbData, ref dataPosition);
-
             record.FileLength = ByteConverter.ParseUInt64(mbdbData, ref dataPosition);
-
             record.Flag = ByteConverter.ParseByte(mbdbData, ref dataPosition);
 
             byte propertyCount = ByteConverter.ParseByte(mbdbData, ref dataPosition);
@@ -96,7 +82,6 @@ namespace AllYourTextsLib.DataReader
         private static MbdbRecordProperty ParseRecordProperty(byte[] mbdbData, ref int dataPosition)
         {
             string propertyName = ParseString(mbdbData, ref dataPosition);
-
             string propertyValue = ParseString(mbdbData, ref dataPosition);
 
             return new MbdbRecordProperty(propertyName, propertyValue);

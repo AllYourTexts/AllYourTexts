@@ -6,7 +6,6 @@ namespace AllYourTextsLib.Framework
     [Serializable()]
     public abstract class BackupDatabaseReadException : Exception
     {
-
         public BackupDatabaseReadException()
             : base()
         {

@@ -15,25 +15,15 @@ namespace AllYourTextsLib.Framework
     public interface IBugReportCreator
     {
         string FullBugDetail { get; }
-
         string CustomerEmail { get; set; }
-
         string CustomerComments { get; set; }
-
         string EnvironmentInfo { get; }
-
         Exception RelatedException { get; set; }
-
         BugArea Area { get; set; }
-
         bool ForceNewBugCreation { get; set; }
-
         bool IncludesSystemInformation { get; set; }
-
         bool IncludesVersionInformation { get; set; }
-
         bool Report(IBugReportCollector reportCollector);
-
         string BugServerResponse { get; }
     }
 }

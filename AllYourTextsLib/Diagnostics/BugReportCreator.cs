@@ -11,19 +11,12 @@ namespace AllYourTextsLib
     public class BugReportCreator : IBugReportCreator
     {
         public string CustomerEmail { get; set; }
-
         public string CustomerComments { get; set; }
-
         public Exception RelatedException { get; set; }
-
         public BugArea Area { get; set; }
-
         public bool ForceNewBugCreation { get; set; }
-
         public bool IncludesSystemInformation { get; set; }
-
         public bool IncludesVersionInformation { get; set; }
-
         public string BugServerResponse { get; private set; }
 
         public BugReportCreator()

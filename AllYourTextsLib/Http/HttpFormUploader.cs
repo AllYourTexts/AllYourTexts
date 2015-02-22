@@ -13,13 +13,9 @@ namespace AllYourTextsLib
     public class HttpFormUploader : IHttpFormUploader
     {
         public string Url { get; set; }
-
         private string _uploadFileFieldName;
-
         private string _uploadContentType;
-
         private byte[] _uploadFileData;
-
         private NameValueCollection _PostParameters;
 
         public HttpFormUploader()
