@@ -1,9 +1,7 @@
-﻿using AllYourTextsUi;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using AllYourTextsLib.Framework;
+﻿using AllYourTextsLib.Framework;
+using AllYourTextsUi;
 using DummyData;
-using AllYourTextsLib;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AllYourTextsTest
 {

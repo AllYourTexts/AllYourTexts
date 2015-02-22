@@ -1,11 +1,9 @@
-﻿using AllYourTextsUi.Models;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using AllYourTextsLib.Framework;
+﻿using System.IO;
 using AllYourTextsLib;
+using AllYourTextsLib.Framework;
 using AllYourTextsUi.Framework.Exceptions;
-using AllYourTextsUi.Framework;
-using System.IO;
+using AllYourTextsUi.Models;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AllYourTextsTest
 {

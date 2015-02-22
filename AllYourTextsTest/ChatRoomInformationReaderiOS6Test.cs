@@ -1,9 +1,8 @@
-﻿using AllYourTextsLib.DataReader;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using AllYourTextsLib;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using AllYourTextsLib;
+using AllYourTextsLib.DataReader;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AllYourTextsTest
 {

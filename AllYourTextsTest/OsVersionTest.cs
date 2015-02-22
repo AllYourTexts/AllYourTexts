@@ -1,6 +1,6 @@
-﻿using AllYourTextsLib;
+﻿using System;
+using AllYourTextsLib;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 
 namespace AllYourTextsTest
 {

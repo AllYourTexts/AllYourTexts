@@ -1,6 +1,6 @@
-﻿using AllYourTextsUi.Exporting;
+﻿using System;
+using AllYourTextsUi.Exporting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 
 namespace AllYourTextsTest
 {

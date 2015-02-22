@@ -1,7 +1,6 @@
-﻿using AllYourTextsLib;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+﻿using System;
 using AllYourTextsLib.DataReader;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace AllYourTextsTest
 {

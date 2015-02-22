@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using AllYourTextsLib.Framework;
 using System.ComponentModel;
+using AllYourTextsLib.Framework;
 
 namespace AllYourTextsUi
 {

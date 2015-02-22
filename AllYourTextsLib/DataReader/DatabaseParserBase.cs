@@ -1,8 +1,5 @@
-﻿using System;
+﻿using AllYourTextsLib.Framework;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using AllYourTextsLib.Framework;
 
 namespace AllYourTextsLib.DataReader
 {

@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using AllYourTextsLib.Framework;
 using AllYourTextsUi.Framework;
-using AllYourTextsLib.Framework;
 
 namespace AllYourTextsUi
 {

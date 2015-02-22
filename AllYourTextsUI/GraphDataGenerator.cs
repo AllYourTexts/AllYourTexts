@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using AllYourTextsUi.Framework;
 using AllYourTextsLib.Framework;
+using AllYourTextsUi.Framework;
 
 namespace AllYourTextsUi
 {
