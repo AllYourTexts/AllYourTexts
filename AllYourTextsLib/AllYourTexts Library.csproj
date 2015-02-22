@@ -106,8 +106,6 @@
     <Compile Include="DataReader\MbdbRecordReader.cs" />
     <Compile Include="MergedContact.cs" />
     <Compile Include="Conversation\MergingConversationManager.cs" />
-    <Compile Include="DataReader\ContactPhotoReader.cs" />
-    <Compile Include="ContactPhoto.cs" />
     <Compile Include="MessageAttachment.cs" />
     <Compile Include="MmsDataItem.cs" />
     <Compile Include="MmsMessageData.cs" />
