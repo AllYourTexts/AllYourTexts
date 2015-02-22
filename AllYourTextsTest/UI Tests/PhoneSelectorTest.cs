@@ -94,9 +94,9 @@ namespace AllYourTextsTest
             {
                 found = false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                throw;
             }
 
             Assert.IsFalse(found);
