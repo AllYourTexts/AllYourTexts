@@ -59,7 +59,7 @@ WHERE
                 List<string> bytesAsStrings = new List<string>(participantsRaw.Length);
                 foreach (byte participantsRawByte in participantsRaw)
                 {
-                    bytesAsStrings.Add(string.Format("0x{1:X2}", participantsRawByte));
+                    bytesAsStrings.Add(string.Format("0x{0:X2}", participantsRawByte));
                 }
                 string bytesString = "{" + string.Join(", ", bytesAsStrings) + "}";
 
