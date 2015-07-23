@@ -176,10 +176,28 @@ namespace AllYourTextsLib.Conversation
             }
 
             IConversation conversation;
-
             if (conversationHashTable.ContainsKey(conversationKey))
             {
                 conversation = conversationHashTable[conversationKey];
+
+                // If The contact is not part of the conversation, add them here. This can happen with "orphaned" chat
+                // messages.
+                if (!message.Contact.Equals(unknownContact) && !conversation.AssociatedContacts.Contains(message.Contact))
+                {
+                    conversation.AssociatedContacts.Add(message.Contact);
+                }
+            }
+            else if (message.ChatId != null)
+            {
+                // It's possible to have "orphaned" chat messages, where they appear in the message database with a chat ID
+                // but the chat ID was not in the chat room database. Handle those here.
+                List<IContact> chatContacts = new List<IContact>();
+                if (!message.Contact.Equals(unknownContact))
+                {
+                    chatContacts.Add(message.Contact);
+                }
+                conversation = new ChatConversation(chatContacts);
+                conversationHashTable.Add(message.ChatId, conversation);
             }
             else
             {
