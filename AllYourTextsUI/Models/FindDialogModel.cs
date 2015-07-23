@@ -284,6 +284,10 @@ namespace AllYourTextsUi
         {
             foreach (IConversationMessage message in conversation)
             {
+                if (string.IsNullOrEmpty(message.MessageContents))
+                {
+                    continue;
+                }
                 if (FindWordInString(wordToFind, message.MessageContents, searchDirection) >= 0)
                 {
                     return true;
