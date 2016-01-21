@@ -99,10 +99,6 @@ DocProject/Help/*.hhp
 DocProject/Help/Html2
 DocProject/Help/html
 
-## Click-Once Ignores
-
-publish/
-
 ## Publish Web Output
 
 *.Publish.xml
