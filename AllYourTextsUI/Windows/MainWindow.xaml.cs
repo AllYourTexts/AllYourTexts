@@ -15,7 +15,6 @@ using AllYourTextsUi.Framework;
 using Microsoft.Win32;
 using AllYourTextsUi.Windows;
 using AllYourTextsUi.Commands;
-using AllYourTextsUi.Facebook;
 using AllYourTextsUi.Exporting;
 
 namespace AllYourTextsUi
@@ -112,26 +111,6 @@ namespace AllYourTextsUi
         }
 
         public void DoCopyGraph_CanExecute(object sender, CanExecuteRoutedEventArgs e)
-        {
-            e.CanExecute = true;
-        }
-
-        public void DoShareOnFacebook_Executed(object sender, ExecutedRoutedEventArgs e)
-        {
-            IAccessTokenSerializer tokenSerializer = new AccessTokenSerializer(new OsFileSystem());
-            GraphFacebookUploader uploader = new GraphFacebookUploader(tokenSerializer);
-
-            try
-            {
-                uploader.DoUpload(graphControl.GetGraphBitmap());
-            }
-            catch
-            {
-                ;
-            }
-        }
-
-        public void DoShareOnFacebook_CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
             e.CanExecute = true;
         }

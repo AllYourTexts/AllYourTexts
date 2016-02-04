@@ -78,8 +78,6 @@
     <Compile Include="Mock Objects\MockFormUploader.cs" />
     <Compile Include="Mock Objects\MockPhoneSelectOptions.cs" />
     <Compile Include="Mock Objects\MockThrowingFormUploader.cs" />
-    <Compile Include="UI Tests\Facebook Tests\AccessTokenSerializerTest.cs" />
-    <Compile Include="UI Tests\Facebook Tests\PhotoPosterTest.cs" />
     <Compile Include="UI Tests\FileCreatorTest.cs" />
     <Compile Include="UI Tests\PhoneSelectorTest.cs" />
     <Compile Include="UI Tests\ExportMultipleDialogViewTest.cs" />
