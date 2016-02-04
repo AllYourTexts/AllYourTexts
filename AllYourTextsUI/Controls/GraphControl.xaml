@@ -33,7 +33,6 @@
                 <ContextMenu>
                     <MenuItem Header="Copy" Command="{x:Static localCommands:CopyGraphCommand.CopyGraph}" />
                     <MenuItem Header="Save" Command="ApplicationCommands.Save" />
-                    <MenuItem Header="Share on Facebook" Command="{x:Static localCommands:ShareOnFacebookCommand.ShareOnFacebook}" />
                 </ContextMenu>
             </chartingToolkit:Chart.ContextMenu>
             <chartingToolkit:Chart.LegendStyle>
@@ -56,8 +55,5 @@
                 DependentValuePath="MessagesTotal"
                 Name="messagesTotalSeries" />
         </chartingToolkit:Chart>
-        <Button Margin="12" Padding="0" Width="40" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Background="Transparent" BorderBrush="LightGray" BorderThickness="1" ToolTip="Share on Facebook" Command="{x:Static localCommands:ShareOnFacebookCommand.ShareOnFacebook}">
-            <Image Source="pack://application:,,,/Resources/facebookicon.png" Width="30" Height="30" />
-        </Button>
     </Grid>
 </UserControl>

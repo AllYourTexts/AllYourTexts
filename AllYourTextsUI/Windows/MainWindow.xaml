@@ -24,9 +24,6 @@
         <CommandBinding Command="{x:Static localCommands:CopyGraphCommand.CopyGraph}"
                         Executed="DoCopyGraph_Executed"
                         CanExecute="DoCopyGraph_CanExecute" />
-        <CommandBinding Command="{x:Static localCommands:ShareOnFacebookCommand.ShareOnFacebook}"
-                        Executed="DoShareOnFacebook_Executed"
-                        CanExecute="DoShareOnFacebook_CanExecute" />
         <CommandBinding Command="Find"
                         Executed="DoFind_Executed"
                         CanExecute="DoFind_CanExecute" />

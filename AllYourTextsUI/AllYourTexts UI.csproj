@@ -120,7 +120,6 @@
     <Compile Include="Commands\ExportAllConversationsCommand.cs" />
     <Compile Include="Commands\ExportSingleConversationCommand.cs" />
     <Compile Include="Commands\OpenAttachmentImageCommand.cs" />
-    <Compile Include="Commands\ShareOnFacebookCommand.cs" />
     <Compile Include="Commands\ShowSettingsDialogCommand.cs" />
     <Compile Include="Commands\SwitchToConversationViewCommand.cs" />
     <Compile Include="Commands\SwitchToGraphViewCommand.cs" />
@@ -162,29 +161,6 @@
     <Compile Include="Exporting\FileCreator.cs" />
     <Compile Include="Exporting\FileSystemBase.cs" />
     <Compile Include="Exporting\OsFileSystem.cs" />
-    <Compile Include="Facebook\AccessToken.cs" />
-    <Compile Include="Facebook\AccessTokenSerializer.cs" />
-    <Compile Include="Facebook\BadAccessTokenException.cs" />
-    <Compile Include="Facebook\GotPhotoUrlEventArgs.cs" />
-    <Compile Include="Facebook\GraphFacebookUploader.cs" />
-    <Compile Include="Facebook\HttpUtility.cs" />
-    <Compile Include="Facebook\IAccessTokenSerializer.cs" />
-    <Compile Include="Facebook\IPhotoLinkGrabber.cs" />
-    <Compile Include="Facebook\IPhotoPoster.cs" />
-    <Compile Include="Facebook\OAuthCompleteEventArgs.cs" />
-    <Compile Include="Facebook\OAuthConsentView.xaml.cs">
-      <DependentUpon>OAuthConsentView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Facebook\OAuthData.cs" />
-    <Compile Include="Facebook\OAuthFrame.xaml.cs" />
-    <Compile Include="Facebook\OAuthGrabber.cs" />
-    <Compile Include="Facebook\PhotoLinkGrabber.cs" />
-    <Compile Include="Facebook\PhotoPoster.cs" />
-    <Compile Include="Facebook\PhotoUploadCompleteEventArgs.cs" />
-    <Compile Include="Facebook\PhotoUploadModel.cs" />
-    <Compile Include="Facebook\PhotoUploadView.xaml.cs" />
-    <Compile Include="Facebook\PhotoUploadViewFactory.cs" />
-    <Compile Include="Facebook\UploadFailedException.cs" />
     <Compile Include="Framework\Exceptions\AttachmentOpenException.cs" />
     <Compile Include="Framework\IAttachmentExportLocator.cs" />
     <Compile Include="FailHandler.cs" />
@@ -288,18 +264,6 @@
     <Page Include="Controls\PhoneDeviceListItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Facebook\OAuthConsentView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Facebook\OAuthFrame.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Facebook\PhotoUploadView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="Windows\AboutBoxView.xaml">
       <SubType>Designer</SubType>
@@ -492,9 +456,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\video_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\facebookicon.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\conversation_icon.png" />
