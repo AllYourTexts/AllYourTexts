@@ -132,12 +132,12 @@ namespace AllYourTextsUi
         {
             IConversationManager conversationManager = null;
 
-            using (DatabaseReader contactDatabaseReader = new DatabaseReader(DatabaseFinder.FindContactDatabasePath(deviceInfo.BackupPath)))
+            using (DatabaseReader contactDatabaseReader = new DatabaseReader(DatabaseFinder.FindContactDatabasePath(deviceInfo)))
             {
                 ContactReader contactReader = new ContactReader();
                 contactReader.ParseDatabase(contactDatabaseReader);
 
-                using (DatabaseReader textDatabaseReader = new DatabaseReader(DatabaseFinder.FindTextMessageDatabasePath(deviceInfo.BackupPath)))
+                using (DatabaseReader textDatabaseReader = new DatabaseReader(DatabaseFinder.FindTextMessageDatabasePath(deviceInfo)))
                 {
                     TextMessageReaderBase textMessageReader;
                     IEnumerable<ChatRoomInformation> chatReader;
